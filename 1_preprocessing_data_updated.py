@@ -259,7 +259,7 @@ def main():
     
     
     input_directory="../DATA/Training_WFDB"
-    output_directory="../DATA/Training_IMAGES_Classed_Trimmed_0_2"
+    output_directory="../DATA/Training_WFDB_IMAGES_Classed_Trimmed_0_2"
     csvfilename="1.PATIENT_HEADER.csv"
     
     makealldirectoriesatonce(output_directory,actual_label[1],classes,csvfilename)
