@@ -1,32 +1,20 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-<<<<<<< HEAD
 # In[46]:
-=======
-# In[330]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 #from google.colab import drive
 #drive.mount('/content/drive')
 
 
-<<<<<<< HEAD
 # In[47]:
-=======
-# In[331]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 #!pip install wfdb
 
 
-<<<<<<< HEAD
 # In[48]:
-=======
-# In[332]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 import numpy as np, os, sys
@@ -37,11 +25,7 @@ import pandas as pd
 import csv
 
 
-<<<<<<< HEAD
 # In[49]:
-=======
-# In[333]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 def writetocsv(PATIENTSDATA,output_dir,csvfilename):
@@ -56,11 +40,7 @@ def writetocsv(PATIENTSDATA,output_dir,csvfilename):
     f1.close()
 
 
-<<<<<<< HEAD
 # In[50]:
-=======
-# In[334]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 def returnlistofcsvfile(output_dir,csvfilename):
@@ -80,11 +60,7 @@ def returnlistofcsvfile(output_dir,csvfilename):
         return filelist
 
 
-<<<<<<< HEAD
 # In[51]:
-=======
-# In[335]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 def writeheadertocsvonce(output_dir, csvfilename):
@@ -97,11 +73,7 @@ def writeheadertocsvonce(output_dir, csvfilename):
         f1.close()
 
 
-<<<<<<< HEAD
 # In[52]:
-=======
-# In[336]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 def makealldirectoriesatonce(output_directory,actual_labels,classes,csvfilename):
@@ -126,11 +98,7 @@ def makealldirectoriesatonce(output_directory,actual_labels,classes,csvfilename)
                     os.mkdir(output_directory+"/"+str(lead_names[i])+"/"+str(tmp_class_names[ii]))
 
 
-<<<<<<< HEAD
 # In[53]:
-=======
-# In[337]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 def drawandsavefig(PTDETAILSDATA, data, output_directory):
@@ -162,11 +130,7 @@ def drawandsavefig(PTDETAILSDATA, data, output_directory):
 
 
 
-<<<<<<< HEAD
 # In[54]:
-=======
-# In[338]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 def load_data(filename):
@@ -181,21 +145,12 @@ def load_data(filename):
     return data, header_data
 
 
-<<<<<<< HEAD
 # In[55]:
 
 
 def getactuallabels(classes):
     dictclasses={'713427006':'Right Bundle Branch Block','63593006':'Premature Atrial Contraction','164884008':'Ventricular Ectopics', '164889003':'Atrial Fibrillation', '164909002':'Left Bundle Branch Block', '164931005':'ST Elevation', '270492004':'1st Degree AV Block', '284470004':'Premature Atrial Contraction', '426783006':'Sinus Rhythm', '429622005':'ST Depression', '59118001':'Right Bundle Branch Block'}
     dictclasses_abrevated={'713427006':'RBBB','63593006':'PAC','164884008':'VEB', '164889003':'AF', '164909002':'LBBB', '164931005':'STE', '270492004':'IAVB', '284470004':'PAC', '426783006':'SNR', '429622005':'STD', '59118001':'RBBB'}
-=======
-# In[339]:
-
-
-def getactuallabels(classes):
-    dictclasses={'164884008':'Premature Ventricular Complexes', '164889003':'Atrial Fibrillation', '164909002':'Left Bundle Branch Block', '164931005':'ST Elevation', '270492004':'1st Degree AV Block', '284470004':'Premature Atrial Contraction', '426783006':'Sinus Rhythm', '429622005':'ST Depression', '59118001':'Right Bundle Branch Block'}
-    dictclasses_abrevated={'164884008':'PVC', '164889003':'AF', '164909002':'LBBB', '164931005':'STE', '270492004':'IAVB', '284470004':'PAC', '426783006':'SNR', '429622005':'STD', '59118001':'RBBB'}
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
     '''for label in classes:
         #print(label)
         print(dictclasses_abrevated[str(label)] + " : " + dictclasses[str(label)])
@@ -209,11 +164,7 @@ def getactuallabels(classes):
 
 
 
-<<<<<<< HEAD
 # In[56]:
-=======
-# In[340]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 def get_classes(input_directory,files):
@@ -230,11 +181,7 @@ def get_classes(input_directory,files):
     return sorted(classes)
 
 
-<<<<<<< HEAD
 # In[57]:
-=======
-# In[341]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 def get_12ECG_features(tmp_input_file, data, header_data):
@@ -292,11 +239,7 @@ def get_12ECG_features(tmp_input_file, data, header_data):
 
 
 
-<<<<<<< HEAD
 # In[58]:
-=======
-# In[342]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 def main():
@@ -308,11 +251,7 @@ def main():
     
     
     #classes=get_classes(input_directory,input_files)
-<<<<<<< HEAD
     classes= ['713427006','63593006', '164884008', '164889003', '164909002', '164931005', '270492004', '284470004', '426783006', '429622005', '59118001']
-=======
-    classes= ['164884008', '164889003', '164909002', '164931005', '270492004', '284470004', '426783006', '429622005', '59118001']
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
     #print(classes)
     actual_label=getactuallabels(classes)
     #print(actual_label[0])
@@ -374,19 +313,13 @@ def main():
         
         data,header_data = load_data(tmp_input_file)
         PTDETAILSDATA=get_12ECG_features(tmp_input_file, data, header_data)
-<<<<<<< HEAD
         if str(PTDETAILSDATA[-1]) not in classes:
             continue
-=======
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
         PTDETAILSDATA.append(actual_label[0][str(PTDETAILSDATA[-1])])
         PTDETAILSDATA.append(actual_label[1][str(PTDETAILSDATA[-2])])
         
         print("DONE:" + PTDETAILSDATA[0])
-<<<<<<< HEAD
         
-=======
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
         drawandsavefig(PTDETAILSDATA,data,output_directory)
         writetocsv(PTDETAILSDATA, output_directory,csvfilename)
         #print(header_data)
@@ -398,11 +331,7 @@ def main():
         
 
 
-<<<<<<< HEAD
 # In[59]:
-=======
-# In[343]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 def drawandsavefig_temp(PTDETAILSDATA, data, output_directory):
@@ -432,11 +361,7 @@ def drawandsavefig_temp(PTDETAILSDATA, data, output_directory):
 
 
 
-<<<<<<< HEAD
 # In[60]:
-=======
-# In[344]:
->>>>>>> d4eb8447233fa569aa2db51d2080723be9a3c66d
 
 
 if __name__=="__main__":
